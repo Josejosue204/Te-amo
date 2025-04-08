@@ -1,0 +1,25 @@
+import random
+
+# Lista de poemas
+poemas = [
+    "El joven escapaba, huyendo del pesar,\ndel eco del mundo que no deja de hablar.",
+    "En su soledad halló la razón,\nun propósito claro, nacido en su corazón.",
+    "Una joven danzaba entre telas de blanco color,\ncada giro un poema, un instante de fervor."
+]
+
+# Chatbot
+def chatbot():
+    print("¡Bienvenido! ¿Te gustaría escuchar un poema? Escribe 'si' o 'no'.")
+    while True:
+        user_input = input("Tú: ").strip().lower()
+        if user_input in ["si", "poema"]:
+            poema = random.choice(poemas)
+            print(f"Chatbot: {poema}")
+        elif user_input == "no":
+            print("Chatbot: Está bien, quizás otro momento te deleites con un poema.")
+            break
+        else:
+            print("Chatbot: No entendí tu respuesta. Por favor, escribe 'si' o 'no'.")
+
+# Inicia el chatbot
+chatbot()
